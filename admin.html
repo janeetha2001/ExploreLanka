@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Admin</title>
+<link href="style.css" rel="stylesheet">
+<style>
+  /*User Details*/
+  .modal1 {
+  display:none;
+  position:fixed;
+  z-index: 1;
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+}
+.modal1-content {
+  margin: 20px auto;
+  padding: 20px;
+  width: 600px;
+  height: 500px;
+  border-radius: 20px;
+  background-color:white;
+  border: 1px solid white;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(0,0,0,10);
+  color: #00008B;
+}
+.close {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+  .video-bg {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 50%;
+    }
+body{
+  background-image: url('img/adminbg.jpg');
+  background-size:cover;
+}
+button{
+   background: linear-gradient(135deg, #1E90FF 0%, #F1E5AC 100%);
+   box-shadow: 0 0 25px rgba(0,0,0,10);
+   border: none;
+   font-size: 20px;
+   font-family:Rockwell Condensed;
+}
+</style>
+<script language="javascript" defer>
+function openDisplayUsers(){
+document.getElementById("displayModal1").style.display="block";
+}
+function closeDisplayUsers(){
+document.getElementById("displayModal1").style.display="none";
+}
+function openDisplayContacts(){
+document.getElementById("displayModal2").style.display="block";
+}
+function closeDisplayContacts(){
+document.getElementById("displayModal2").style.display="none";
+}
+function openSearchUser(){
+document.getElementById("displayModal3").style.display="block";
+}
+function closeSearchUser(){
+document.getElementById("displayModal3").style.display="none";
+}
+</script>
+</head>
+<body>
+ <video autoplay muted loop class="video-bg">
+    <source src="video/adminbg.mp4" type="video/mp4">
+  </video>
+	<div class="admin">
+<center>
+<font size="80px" style="font-family:Algerian; color:black; font-weight: bold;">Admin Page</font>
+	<table cellpadding="20px">
+	<tr>
+		<td><button type="button" onclick="openDisplayUsers()">Display Users List</button></td>
+		<td><button type="button" onclick="openDisplayContacts()">Display Contact Details</button></td></tr>
+		<tr><td><button type="button" onclick="openSearchUser()">Search User</button></td>
+		<td><a href="home.html"><button>Home</button></a></td></tr>
+</table></center>
+</div>
+
+<div id="displayModal1" class="modal1">
+  <div class="modal1-content">
+    <span class="close" onclick="closeDisplayUsers()">&times;</span>
+   <center> <font size="50px" style="font-family:Stencil; color:#00008B;"> User Details</font></center>
+    <iframe src="displayUser.php"  width="590px" height="400px" style="border:white; border-radius: 20px; background-color: #ADD8E6;"></iframe>
+</div>
+</div>
+
+<div id="displayModal2" class="modal1">
+  <div class="modal1-content">
+    <span class="close" onclick="closeDisplayContacts()">&times;</span>
+   <center> <font size="50px" style="font-family:Stencil; color:#00008B;"> Contact Details</font></center>
+    <iframe src="displayContact.php"  width="590px" height="400px" style="border:white; border-radius: 20px; background-color: #ADD8E6;"></iframe>
+</div>
+</div>
+
+<div id="displayModal3" class="modal1">
+  <div class="modal1-content">
+    <span class="close" onclick="closeSearchUser()">&times;</span>
+   <center> <font size="50px" style="font-family:Stencil; color:#00008B;"> Search User</font></center>
+    <iframe src="search.html"  width="590px" height="400px" style="border:white; border-radius: 20px; background-color: #ADD8E6;"></iframe>
+</div>
+</div>
+
+  </body>
+</html> 
