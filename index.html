@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 <head>
@@ -468,3 +469,475 @@ const name = this.name.value.trim();
 </body>
 </html>
 
+=======
+<!doctype html>
+<html lang="en">
+<head>
+<title>Index</title>
+<style>
+  /*Login modal*/
+  .modal1 {
+  display:none;
+  position:fixed;
+  z-index: 1;
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+}
+    .video-bg {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 50%;
+    }
+
+.modal1-content {
+  margin: 10% auto;
+  padding: 20px;
+  width: 450px;
+  height: 400px;
+  border-radius: 20px;
+  background-color:#ADD8E6;
+  border: 1px solid #ADD8E6;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(0,0,0,10);
+  color: #00008B;
+}
+.modal1-content h2{
+  font-family: Stencil;
+  font-size: 50px;
+}
+.modal1-content form
+{
+background-color:#E5F3FD;
+border-radius: 20px;
+height: 282px;
+align-content: center;
+}
+.modal1-content input{
+width: 350px;
+}
+.modal1-content button
+{
+height: 45px;
+width: 100px;
+border-radius: 20px;
+border: none;
+background-color:#ADD8E6;
+font-weight: bold;
+}
+.modal1-content button:hover{
+ color: white; 
+ background-color:#00008B;
+}
+.close {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+ /*Signup Modal*/
+  .modal2 {
+  display:none;
+  position:fixed;
+  z-index: 1;
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+}
+.modal2-content {
+  margin: 10% auto;
+  padding: 20px;
+  width: 450px;
+  height: 450px;
+  border-radius: 20px;
+  background-color:#ADD8E6;
+  border: 1px solid #ADD8E6;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(0,0,0,10);
+  color: #00008B;
+}
+.modal2-content h2{
+  font-family: Stencil;
+  font-size: 50px;
+}
+.modal2-content form{
+  padding-left: 15px;
+background-color:#E5F3FD;
+border-radius:20px;
+height: 340px;
+align-content:center;
+font-size: 15px;
+}
+.modal2-content input{
+width: 280px;
+}
+.modal2-content button
+{
+height: 45px;
+width: 100px;
+border-radius: 20px;
+border: none;
+background-color:#ADD8E6;
+font-weight: bold;
+}
+.modal2-content h2{
+  font-family: Stencil;
+  font-size: 50px;
+}
+.modal2-content button:hover{
+ color: white; 
+ background-color:#00008B;
+}
+/*sugnup successfull message*/
+.modal3 {
+  display:none;
+  position:fixed;
+  z-index: 1;
+  left: 0; 
+  top: 15px;
+  width: 100%; 
+  height: 100%;
+}
+.modal3-content {
+  margin: 10% auto;
+  padding: 20px;
+  width: 450px;
+  height: 230px;
+  border-radius: 20px;
+  background-color:white;
+  border: 1px solid white;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(0,0,0,10);
+  color: black;
+}
+.modal3-content h2{
+  font-family: Adobe Myungjo Std M;
+  font-size: 30px;
+}
+.modal3-content button
+{
+height: 45px;
+width: 100px;
+border-radius: 20px;
+border: none;
+background-color:white;
+font-weight: bold;
+}
+.modal3-content button:hover{
+ color: black; 
+ background-color:#8A8AFF;
+}
+/*LogMessageModal message*/
+.modal4 {
+  display:none;
+  position:fixed;
+  z-index: 1;
+  left: 0; 
+  top: 110px;
+  width: 100%; 
+  height: 100%;
+}
+.modal4-content {
+  margin: 10% auto;
+  padding: 20px;
+  width: 450px;
+  height: 180px;
+  border-radius: 20px;
+  background-color:white;
+  border: 1px solid gray;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(0,0,0,10);
+  color: black;
+  border-color: black;
+}
+.modal4-content h2{
+  font-family: Adobe Myungjo Std M;
+  font-size: 30px;
+}
+.modal4-content button
+{
+height: 45px;
+width: 100px;
+border-radius: 20px;
+border: none;
+background-color:#ADD8E6;
+font-weight: bold;
+}
+.modal4-content button:hover{
+ color: black; 
+ background-color:white;
+}
+@keyframes vibrate {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+.vibrate {
+  animation: vibrate 0.3s linear 3;
+}
+  </style>
+<script language="javascript" defer>
+function openLogin(){
+document.getElementById("loginModal").style.display="block";
+document.getElementById("LogMessageModal").style.display="none";
+}
+function closeLogin(){
+document.getElementById("loginModal").style.display="none";
+}
+function openSignup(){
+document.getElementById("signupModal").style.display="block";
+document.getElementById("loginModal").style.display="none";
+}
+function closeSignup(){
+document.getElementById("signupModal").style.display="none";
+}
+function openMessage(){
+document.getElementById("messageModal").style.display="block";
+document.getElementById("signupModal").style.display="none";
+}
+function closeMessage(){
+document.getElementById("messageModal").style.display="none";
+document.getElementById("loginModal").style.display="block";
+}
+function openLogMessage() {
+  const popup = document.getElementById("LogMessageModal");
+  popup.style.display = "block";
+  popup.classList.add("vibrate"); // add vibrate effect
+}
+function closeLogMessage() {
+document.getElementById("LogMessageModal").style.display = "none";
+}
+</script>
+<link href="style.css" rel="stylesheet">
+<link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+   
+<header>
+  <nav class="navbar" id="navbar"><span class="logo">ExploreLanka</span>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link">Home</a></li>
+      <li><a href="#" onclick="openLogMessage()" class="nav-link">About</a></li>
+      <li><a href="#" onclick="openLogMessage()" class="nav-link">Service</a></li>
+      <li><a href="#" onclick="openLogMessage()" class="nav-link">Gallery</a></li>
+      <li><a href="#" onclick="openLogMessage()" class="nav-link">Contact</a></li>
+      <li><a href="#" onclick="openLogMessage()" class="nav-link">Blog</a></li>
+      <li><a href="#" class="nav-link" onclick="openLogin()"><font color="#1E90FF">Login</font></a></li></ul>
+       </nav>
+</header>
+<!-- Login Modal (popup)-->
+<div id="loginModal" class="modal1">
+  <div class="modal1-content">
+     <video autoplay muted loop class="video-bg">
+    <source src="video/bgpopup1.mp4" type="video/mp4">
+  </video>
+    <span class="close" onclick="closeLogin()">&times;</span>
+    <h2><center>Login</center></h2>
+    <form action="login.php" method="POST"><center>
+      <input type="text" name="username" placeholder="Username" required><br><br>
+      <input type="password" name="password" placeholder="Password" required><br><br>
+      <button type="submit">LOGIN</button></center><br>
+     <h4> &nbsp;&nbsp;&nbsp;&nbsp;Don't have an account?&nbsp;&nbsp;<font color="red"><a style="cursor:pointer;" onclick="openSignup()" type="submit">SignUp</h4></font></a>
+    </form>
+  </div>
+</div>
+
+<!-- SignUp Modal (popup)-->
+<div id="signupModal" class="modal2">
+  <div class="modal2-content">
+    <video autoplay muted loop class="video-bg">
+    <source src="video/bgpopup1.mp4" type="video/mp4">
+  </video>
+    <span class="close" onclick="closeSignup()">&times;</span>
+    <center><h2>Sign Up</h2></center>
+  <form id="signupForm" name="signup" method="post" action="signup.php">
+  <table cellpadding="5">
+  <tr><td>Full Name:</td><td><input type="text" name="name" placeholder="your name" required></td></tr>
+  <tr><td>Email:</td><td><input type="text" name="email" placeholder="email" required></td></tr>
+  <tr><td>Username:</td><td><input type="text" name="username" placeholder="username" required></td></tr>
+  <tr><td>Password:</td><td><input type="password" name="password" placeholder="password" required></td></tr>
+  <tr><td colspan="2" align="center"><button type="submit">Submit</button></td></tr>
+</table>
+</form>
+</div>
+</div>
+
+<!-- MessageBox (popup)-->
+<div id="messageModal" class="modal3">
+  <div class="modal3-content">
+    <table cellpadding="15px" bgcolor="#ADD8E6" style="border-radius: 20px; height: 60px;">
+    <!--<span class="close" onclick="closeMessage()">&times;</span>-->
+    <tr><td align="center"><h2>Signup successful! You can now login.</h2></td></tr>
+  <tr><td align="center"><button type="button" onclick="closeMessage()">Ok</button></td></tr></table>
+</div>
+</div>
+
+<!--The message saying you need to log in(popup)-->
+<div id="LogMessageModal" class="modal4">
+  <div class="modal4-content">
+    <span class="close" onclick="closeLogMessage()">&times;</span>
+    <center><h2>Please log in to view more details on this site</h2>
+  <button onclick="openLogin()">Login</button></center>
+</div>
+</div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>BEAUTY OF THE SRI LANKA</h1>
+    <br>
+    <p>Travel through the breathtaking landscapes and cultural wonders of Sri Lanka.</p>
+    <br>
+    <!--<a href="#featuredA" class="hero-btn">GET START</a>-->
+    </div>
+</section>
+<a name="#featuredA"><font size="6" color="#E6E6FF">Galle hidden</font></a>
+<!-- Featured Destinations Section -->
+<section id="featured-destinations" class="featured-destinations section">
+  <div class="container section-title">
+    <h2>Featured Destinations</h2>
+    <div><span>Check Our</span> <span class="description-title">Featured Destinations</span></div>
+  </div>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6" >
+        <section class="section-card">
+          <div class="destination-card">
+            <div class="image-wrapper"> <span class="img-scroll"> <a href="#" onclick="openLogMessage()"><img src="img/galleFort.webp" alt="Destination" class="img-fluid" ></a></span> </div>
+          </div>
+          <br>
+          <div class="content">
+            <div class="section-text">
+              <h4>Galle Dutch Fort</h4>
+              <p align="justify">Galle Fort is a UNESCO World Heritage Site in Sri Lanka, originally built by the Portuguese in the 16th century and heavily fortified by the Dutch in the 17th century.&nbsp;</p>
+              <div class="features"> <span class="feature-tag">&nbsp;</span> <span class="feature-tag">&nbsp;</span> </div>
+              <div class="card-footer"> <a href="#" onclick="openLogMessage()" class="explore-btn">
+                <button class="Destinations-btn">Explore</button>
+                <i class="bi bi-arrow-right"></i> </a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- End Destination Card -->
+      
+     <div class="col-lg-4 col-md-6">
+        <section class="section-card">
+          <div class="destination-card">
+            <div class="image-wrapper"> <span class="img-scroll"> <a href="#" onclick="openLogMessage()"><img src="img/sigiriya10.jpg" alt="Destination" class="img-fluid"></a></span> </div>
+            <br>
+            <div class="content">
+              <div class="section-text">
+                <h4>Sigiriya</h4>
+                <p align="justify">Sigiriya is an ancient rock fortress and palace complex in central Sri Lanka, built in the 5th century by King Kashyapa and known as the "Lion Rock" due to the giant lion's paws at the entrance to the upper levels.</p>
+                <div class="card-footer"> <a href="#" onclick="openLogMessage()" class="explore-btn">
+                  <button class="Destinations-btn">Explore</button>
+                  <i class="bi bi-arrow-right"></i> </a> </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- End Destination Card -->
+      
+    <div class="col-lg-4 col-md-6">
+        <section class="section-card">
+          <div class="destination-card">
+            <div class="image-wrapper"> <span class="img-scroll"> <a href="#" onclick="openLogMessage()"><img src="img/maligawa1.jpg" alt="Destination" class="img-fluid" ></a></span> </div>
+            <br>
+            <div class="content">
+              <div class="section-text">
+                <h4>Temple of the Tooth</h4>
+                <p align="justify">Temple of the Tooth, Buddhist temple within the royal palace complex in Kandy, Sri Lanka, that is Sri Lanka’s most important Buddhist shrine. Also known as the Sri Dalada Maligawa, or Temple of the Sacred Tooth Relic.</p>
+                <div class="card-footer"> <a href="#" onclick="openLogMessage()" class="explore-btn">
+                  <button class="Destinations-btn">Explore</button>
+                  <i class="bi bi-arrow-right"></i> </a> </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- End Destination Card -->
+      
+     <div class="col-lg-4 col-md-6">
+        <section class="section-card">
+          <div class="destination-card">
+            <div class="image-wrapper"> <span class="img-scroll"> <a href="#" onclick="openLogMessage()"><img src="img/mirissa.webp" alt="Destination" class="img-fluid"></a></span> </div>
+            <br>
+            <div class="content">
+              <div class="section-text">
+                <h4>Mirissa Beach</h4>
+                <p align="justify">A vision of tropical bliss, Mirissa Beach boasts powdery pale sand, while its azure water is framed by an arc of coconut palms. The west side is the nicest and has the broadest expanse of sand.</p>
+                <div class="card-footer"> <a href="#" onclick="openLogMessage()" class="explore-btn"><br>
+                  <button class="Destinations-btn">Explore</button>
+                  <i class="bi bi-arrow-right"></i> </a> </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- End Destination Card -->
+      
+      <div class="col-lg-4 col-md-6">
+        <section class="section-card">
+          <div class="destination-card">
+            <div class="image-wrapper"> <span class="img-scroll"> <a href="#" onclick="openLogMessage()"><img src="img/arch.jpg" alt="Destination" class="img-fluid"></a></span> </div>
+            <br>
+            <div class="content">
+              <div class="section-text">
+                <h4>Nine Arch Bridge</h4>
+                <p align="justify">The Nine Arch Bridge, also known as the 'Bridge in the Sky' was constructed by connecting two bog mountains when constructing the Badulla–Colombo railway. This bridge is 300 feet in length, 25 feet in width and 80-100 feet in height.</p>
+                <div class="card-footer"> <a href="#" onclick="openLogMessage()" class="explore-btn">
+                  <button class="Destinations-btn">Explore</button>
+                  <i class="bi bi-arrow-right"></i> </a> </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    <!-- End Destination Card --> 
+    </div>
+  </div>
+</section>
+<!--footer-->
+<footer class="footer"><p align="center">@Copyright <strong>MyWebsite</strong> All Rights Reserved <br>
+    Designed by <font color="red">JS Creation</font></p>
+</footer>
+
+<script>
+//signup form submit 
+  document.getElementById("signupForm").addEventListener("submit",function(e)
+{
+e.preventDefault(); //stop the page reload
+const name = this.name.value.trim();
+  const email = this.email.value.trim();
+  const username = this.username.value.trim();
+  const password = this.password.value.trim();
+
+  if (!name || !email || !username || !password) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+ const formData = new FormData(this);
+  fetch("signup.php", {
+    method: "POST",
+    body: formData
+  })
+.then(response => response.text())
+  .then(data => {
+    document.getElementById("signupModal").style.display = "none";
+    document.getElementById("messageModal").style.display = "block";
+  })
+});
+
+</script>
+</body>
+</html>
+
+>>>>>>> 0aa5d86a4971cd29a27f75ebe0c0d06bdf5df2c9
