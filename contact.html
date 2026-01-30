@@ -1,0 +1,157 @@
+<?php
+  showMessage = false;
+  // Example condition
+  if (isset(_POST['submit'])) {
+    showMessage = true;
+?>
+<!doctype html>
+<html lang="en">
+<head>
+<title>Contact</title>
+<link href="style.css" rel="stylesheet">
+<link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha5122SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style type="text/css">
+/*icon styles*/
+.fa-facebook {
+    font-size: 30px;
+    color: #1877F2;
+}
+.fa-youtube {
+    font-size: 30px;
+    color: #FF0000;
+}
+.fa-instagram {
+    font-size: 30px;
+    color: #962fbf;
+}
+.fa-whatsapp {
+    font-size: 25px;
+    color: #008000;
+}
+.fa-envelope {
+    font-size: 25px;
+    color: red;
+}
+.fa-location-dot {
+    font-size: 25px;
+    color: red;
+}
+    .modal 
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100
+      background-color: rgba(0,0,0,0.5);
+    
+    .modal-content 
+      background: white;
+      margin: 20
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      border-radius: 8px;
+</style>
+</head>
+<body>
+<header>
+  <nav class="navbar" id="navbar"> <span class="logo">ExploreLanka</span>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="service.html" class="nav-link">Service</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><font color="red"><a href="logout.php" class="nav-link">Logout</a></font></li>
+    </ul>
+  </nav>
+</header>
+<!--hero Contact-->
+<section class="hero-contact">
+  <video autoplay muted loop class="heroBackground-video">
+    <source src="video/travel.mp4" type="video/mp4">
+  </video>
+  <!--hero Contact Section1-->
+  <div class="hero-contactSection">
+    <div class="hero-contactContent">
+      <h2>ExploreLanka</h2>
+      <table cellpadding="15">
+        <tr>
+          <td valign="top"><i class="fa-solid fa-location-dot"></i>Vocational Training Authority, Talbot Town, Galle.<br>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253498.96357343634!2d79.57040268671875!3d6.900014899999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596309dfdd3f%3A0x45a4b0e7834ac0d4!2sUniversity%20of%20Colombo!5e0!3m2!1sen!2slk!4v1763479872188!5m2!1sen!2slk" width="370" height="300" style="border:#A5E3F5; border-radius: 20px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="Location"></iframe></td>
+          <td><i class="fa-brands fa-whatsapp"></i>&nbsp;+94763506059<br>
+            <br>
+            <br>
+            <i class="fa-regular fa-envelope"></i>&nbsp;explorelanka@gmail.com<br>
+            <br>
+            <br>
+            <a href="https://www.facebook.com/share/1CNrmG2PJZ/"><i class="fa-brands fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://youtube.com/@universitycolombo?si=-UQUVy3UZKd0MS1G"><i class="fa-brands fa-youtube"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.instagram.com/colombouniversity?igsh=NHpraHNvOTZ5Ymx2"><i class="fa-brands fa-instagram"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <!--hero Contact Section2-->
+  <div class="hero-contactSection2">
+    <div class="hero-contactContent">
+      <h1>Contact Us</h1>
+      <div class="contact-form">
+        <table cellspace="10" cellpadding="5">
+          <form name="contact" method="post" action="contact.php">
+            <tr>
+              <td>Name</td>
+              <td>:</td>
+              <td  width="350px"><input type="text" name="name" placeholder="Your Name" required></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>:</td>
+              <td><input type="text" name="email" placeholder="Your Email" required></td>
+            </tr>
+            <tr>
+              <td>Subject</td>
+              <td>:</td>
+              <td><input type="text" name="subject" placeholder="Subject" required></td>
+            </tr>
+            <tr>
+              <td>Message</td>
+              <td>:</td>
+              <td><textarea placeholder="message" name="message"></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="form-submit"><input type="submit" name="submit" value="Submit"></td>
+            </tr>
+          </form>
+          <div class="modal" id="messageModal">
+  <div class="modal-content">
+    <p>Submission successful!</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+  function closeModal() 
+    document.getElementById('messageModal').style.display = 'none';
+  
+
+  <?php if (showMessage): ?>
+    document.getElementById('messageModal').style.display = 'block';
+  <?php endif; ?>
+</script>
+
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer"><!--footer-->
+  <p align="center">@Copyright <strong>MyWebsite</strong> All Rights Reserved <br>
+    Designed by <font color="red">JS Creation</font></p>
+</footer>
+</body>
+</html>
